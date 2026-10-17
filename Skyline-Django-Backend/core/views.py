@@ -13,7 +13,6 @@ class ServiceListView(generics.ListAPIView):
     def get_queryset(self):
         return Service.objects.filter(is_active=True)
 
-
 class QuoteCreateView(generics.CreateAPIView):
     
     queryset = Quote.objects.all()

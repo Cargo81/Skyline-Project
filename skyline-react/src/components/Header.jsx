@@ -19,7 +19,7 @@ export default function Header() {
           <div className="w-16 sm:w-20">
             <img
               alt="Skyline Stretch Ceiling Logo"
-              src="/public/Images/SKYline-logo.png"
+              src="/images/SKYline-logo.png"
               className="block h-auto w-full object-contain"
             />
           </div>

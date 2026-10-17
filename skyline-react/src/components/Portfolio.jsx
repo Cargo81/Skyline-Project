@@ -12,48 +12,48 @@ const FILTERS = [
 const ITEMS = [
   {
     category: "3d-designs",
-    src: "/public/images/3D_Design1.jpg",
+    src: "/images/3D_Design1.jpg",
     alt: "Parametric floral lotus stretch ceiling",
     title: "Parametric Floral / Lotus Stretch Ceiling",
     text: "A dramatic focal ceiling featuring geometric petal-lattice framework paired with high-translucency backlit membranes.",
   },
   {
     category: "custom-prints",
-    src: "/public/images/Printing_Design1.jpg",
+    src: "/images/Printing_Design1.jpg",
     alt: "3D illuminated pillars",
     title: "3D Illuminated Pillars",
     text: "Modern LED stretch ceiling feature columns.",
   },
   {
     category: "commercial",
-    src: "/public/images/Simple_Design1.jpg",
+    src: "/images/Simple_Design1.jpg",
     alt: "Glossy white stretch ceiling",
     title: "Glossy White Stretch Ceiling for Business",
     text: "Starry night effect stretch ceiling with fiber optics, creating a luxurious ambiance.",
   },
   {
     category: "commercial",
-    src: "/public/images/Sky_Design1.jpg",
+    src: "/images/Sky_Design1.jpg",
     alt: "Healthcare and MRI suite virtual skylight",
     title: "Healthcare & MRI Suite Virtual Skylight",
     text: "High-definition backlit sky print designed to reduce anxiety and create a calming ambiance in clinical environments.",
   },
   {
     category: "residential",
-    src: "/public/images/SKYdesign2.jpg",
+    src: "/images/SKYdesign2.jpg",
     alt: "Sky printed ceiling",
     title: "Sky Printed Ceiling",
     text: "Vibrant backlit floral ceiling design for modern homes.",
   },
   {
     category: "residential",
-    src: "/public/images/3D_Design3.jpg",
+    src: "/images/3D_Design3.jpg",
     alt: "Side wall 3D printed design",
     title: "Side Wall 3D Printed Design",
   },
   {
     category: "residential",
-    src: "/public/images/Simple_Design3.jpg",
+    src: "/images/Simple_Design3.jpg",
     alt: "Plain and simple stretch ceiling",
     title: "Plain and Simple Design",
   },
@@ -132,7 +132,7 @@ export default function Portfolio() {
                 type="button"
                 aria-pressed={isActive}
                 onClick={() => setActiveFilter(filter.value)}
-                className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition duration-300 ${
+                className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition duration-300 cursor-pointer ${
                   isActive
                     ? "border-amber-500 bg-amber-400 text-slate-950 shadow-md"
                     : "border-slate-200 bg-white text-slate-700 hover:border-amber-400 hover:text-amber-700"
@@ -143,15 +143,13 @@ export default function Portfolio() {
             );
           })}
         </div>
-
-        
+      
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item) => (
             <PortfolioCard key={item.src} item={item} />
           ))}
         </div>
-
-       
+      
         {filteredItems.length === 0 && (
           <p className="py-12 text-center text-slate-500">
             No projects found in this category.

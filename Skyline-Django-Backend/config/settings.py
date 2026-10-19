@@ -192,17 +192,20 @@ STORAGES = {
 # CORS AND CSRF
 # --------------------------------------------------
 
+
+# --------------------------------------------------
+# CORS AND CSRF
+# --------------------------------------------------
+
 CORS_ALLOWED_ORIGINS = [
     origin.strip().rstrip("/")
     for origin in os.environ.get(
         "CORS_ALLOWED_ORIGINS",
-        (
-            "http://localhost:5173,"
-            "http://127.0.0.1:5173,"
-            "http://localhost:5174,"
-            "http://localhost:5175,"
-            "https://skyline-project-qfhu-kll8qou2a-cargo19.vercel.app",
-        ),
+        "http://localhost:5173,"
+        "http://127.0.0.1:5173,"
+        "http://localhost:5174,"
+        "http://localhost:5175,"
+        "https://skyline-project-qfhu-kll8qou2a-cargo19.vercel.app",
     ).split(",")
     if origin.strip()
 ]

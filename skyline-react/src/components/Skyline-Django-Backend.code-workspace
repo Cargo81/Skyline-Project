@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Skyline-Django-Backend",
+			"path": "../../../../../Downloads/Skyline-Django-Backend"
+		},
+		{
+			"name": "Skyline",
+			"path": "../../.."
+		}
+	],
+	"settings": {}
+}
